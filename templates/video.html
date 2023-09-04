@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Here's your summarized video, let's share it! {% endblock %}</h1>
+
+    <p>Video for {{address}}:</p>
+    <video src="/{{video_url}}" width="500" controls ></video>
+
+    <p>Here's the URL: <a href="{{video_url}}" target="_blank">your video</a></p>
+
+    <p>Share on: <a href="#">Instagram</a>, <a href="#">TikTok</a>, <a href="#">YouTube</a></p>
+
+    <p>Copy this URL to <a href="/video/{{video_id}}">watch this video</a> or share: <input type="text" value="http://127.0.0.1:5000/video/{{video_id}}" /></p>
+{% endblock %}

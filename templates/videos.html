@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} All videos here! {% endblock %}</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Movie File</th>
+        </tr>
+        {% for id, details in video_details.items() %}
+        <tr>
+            <td>{{ id }}</td>
+            <td><a href="/video/{{ id }}">{{ details['movie_file'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

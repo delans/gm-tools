@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Summarize video {% endblock %}</h1>
+    <form method="post">
+        <label for="url">Fill in your video URL to get a summary</label>
+        <br>
+        <input type="text" name="url"
+               placeholder="Message title"
+               value="{{ request.form['url'] }}"></input>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
